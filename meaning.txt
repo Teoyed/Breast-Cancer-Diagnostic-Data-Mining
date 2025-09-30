@@ -1,0 +1,153 @@
+Diagnosis:
+M = Malignant → Cancerous tumor (bad, dangerous, needs treatment).
+B = Benign → Non-cancerous tumor (not dangerous, doesn’t spread).
+
+radius_mean:
+What it is: The average distance from the center of the cell nucleus to its edge → basically the average size of the nuclei.
+Higher values = larger nuclei → often linked with malignant (cancerous) tumors.
+Lower values = smaller nuclei → more typical for benign (non-cancerous) tumors.
+
+texture_mean:
+What it is: The average variation in pixel intensity (gray levels) inside the nucleus → basically how smooth or rough the cell looks.
+Higher values = more variation (rougher texture) → often linked with malignant tumors.
+Lower values = more uniform/smooth texture → more typical for benign tumors.
+
+perimeter_mean:
+What it is: The average length of the outline (boundary) of the nuclei.
+Higher values = nuclei have a larger boundary → usually seen in malignant tumors.
+Lower values = nuclei have a smaller boundary → more common in benign tumors.
+
+area_mean:
+What it is: The average surface area of the nuclei.
+Higher values = larger nuclei, which is more typical of malignant tumors.
+Lower values = smaller nuclei, more typical of benign tumors.
+
+smoothness_mean:
+What it is: The average measure of how smooth or irregular the edges of the nuclei are.
+Higher values = edges are less smooth / more irregular, often linked with malignant tumors.
+Lower values = edges are smoother / more regular, more typical for benign tumors.
+
+compactness_mean:
+What it is: Measures how “tight” or “round” the nucleus is. It’s calculated roughly as (perimeter² / area – 1).
+Higher values = nucleus is less compact / more irregular, often seen in malignant tumors.
+Lower values = nucleus is more compact / rounder, typical of benign tumors.
+
+concavity_mean:
+What it is: Measures how deep the indentations or inward curves are on the nucleus boundary.
+Higher values = more pronounced inward curves, often linked with malignant tumors.
+Lower values = smoother boundary with fewer indentations, typical of benign tumors.
+
+concave_points_mean:
+What it is: Counts the number of inward curve points (concave points) on the nucleus boundary.
+Higher values = more concave points → more likely malignant.
+Lower values = fewer concave points → more likely benign.
+
+symmetry_mean:
+What it is: Measures how symmetric the nucleus is in shape.
+Higher values = nucleus is less symmetric / more irregular, often linked with malignant tumors.
+Lower values = nucleus is more symmetric / regular, typical of benign tumors.
+
+fractal_dimension_mean:
+What it is: Measures how complex or “rough” the nucleus boundary is using a mathematical concept called fractal dimension.
+Higher values = more complex/irregular boundary, often linked with malignant tumors.
+Lower values = smoother, simpler boundary → more typical for benign tumors.
+
+radius_se:
+What it is: Measures the variability (standard error) of the nucleus radius in the sample.
+Higher values = more variation in nucleus size → can indicate malignant tumors.
+Lower values = sizes are more consistent → more typical for benign tumors.
+
+texture_se:
+What it is: Measures the variability (standard error) of the nucleus texture in the sample.
+Higher values = more variation in texture → can indicate malignant tumors.
+Lower values = texture is more consistent → typical for benign tumors.
+
+perimeter_se:
+What it is: Measures the variability (standard error) of the nucleus perimeter in the sample.
+Higher values = more variation in perimeter → often linked with malignant tumors.
+Lower values = perimeter is more consistent → typical for benign tumors.
+
+area_se:
+What it is: Measures the variability (standard error) of the nucleus area in the sample.
+Higher values = more variation in nucleus size → often linked with malignant tumors.
+Lower values = sizes are more consistent → typical for benign tumors.
+
+smoothness_se:
+What it is: Measures the variability (standard error) of the nucleus edge smoothness in the sample.
+Higher values = more variation in smoothness → can indicate malignant tumors.
+Lower values = edges are consistently smooth → typical for benign tumors.
+
+compactness_se:
+What it is: Measures the variability (standard error) of nucleus compactness in the sample.
+Higher values = more variation in how “tight” or irregular nuclei are → often linked with malignant tumors.
+Lower values = compactness is more consistent → typical for benign tumors.
+
+concavity_se:
+What it is: Measures the variability (standard error) of the concavity (depth of inward curves) of the nuclei.
+Higher values = more variation in concavity → often linked with malignant tumors.
+Lower values = concavity is more consistent → typical for benign tumors.
+
+concave_points_se:
+What it is: Measures the variability (standard error) of the number of concave points on the nuclei.
+Higher values = more variation in concave points → often linked with malignant tumors.
+Lower values = concave points are more consistent → typical for benign tumors.
+
+symmetry_se:
+What it is: Measures the variability (standard error) of the nucleus symmetry in the sample.
+Higher values = more variation in symmetry → often linked with malignant tumors.
+Lower values = symmetry is more consistent → typical for benign tumors.
+
+fractal_dimension_se:
+What it is: Measures the variability (standard error) of the nucleus boundary complexity.
+Higher values = more variation in boundary complexity → often linked with malignant tumors.
+Lower values = complexity is more consistent → typical for benign tumors.
+
+radius_worst:
+What it is: The largest radius (distance from center to edge) observed among all nuclei in the sample.
+Higher values = bigger nuclei → more likely malignant.
+Lower values = smaller nuclei → more likely benign.
+
+texture_worst:
+What it is: The largest variation in texture observed among all nuclei in the sample.
+Higher values = rougher or more irregular nuclei → more likely malignant.
+Lower values = smoother, more uniform nuclei → more likely benign.
+
+perimeter_worst:
+What it is: The largest perimeter (boundary length) observed among all nuclei in the sample.
+Higher values = nuclei with a longer boundary → more likely malignant.
+Lower values = nuclei with shorter boundaries → more likely benign.
+
+area_worst:
+What it is: The largest area observed among all nuclei in the sample.
+Higher values = larger nuclei → more likely malignant.
+Lower values = smaller nuclei → more likely benign.
+
+smoothness_worst:
+What it is: The largest irregularity in nucleus edges observed among all nuclei in the sample.
+Higher values = edges are more irregular → more likely malignant.
+Lower values = edges are smoother → more likely benign.
+
+compactness_worst:
+What it is: The largest irregularity in nucleus compactness observed among all nuclei in the sample.
+Higher values = nuclei are less compact / more irregular → more likely malignant.
+Lower values = nuclei are more compact / round → more likely benign.
+
+concavity_worst:
+What it is: The deepest inward curves (concavities) observed among all nuclei in the sample.
+Higher values = more pronounced/deep concavities → more likely malignant.
+Lower values = shallower concavities → more likely benign.
+
+concave_points_worst:
+What it is: The largest number of concave points observed among all nuclei in the sample.
+Higher values = more indentations → more likely malignant.
+Lower values = fewer indentations → more likely benign.
+
+symmetry_worst:
+What it is: The most extreme asymmetry observed among all nuclei in the sample.
+Higher values = nucleus shapes are more irregular → more likely malignant.
+Lower values = shapes are more symmetric → more likely benign.
+
+fractal_dimension_worst:
+What it is: The most complex/irregular boundary observed among all nuclei in the sample, measured with fractal dimension.
+Higher values = more complex/irregular boundaries → more likely malignant.
+Lower values = simpler/smoother boundaries → more likely benign.
