@@ -4,4 +4,4 @@ https://www.researchgate.net/publication/378662703_Breast_Cancer_Classification_
 
 
 Dataset:
-https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
+https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data
