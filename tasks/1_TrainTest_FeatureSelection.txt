@@ -1,0 +1,35 @@
+Train and Test dataset split:
+Section 3.3 of the article says that the testing data is 20% of the dataset and training data is 80%.
+
+With this spliting:
+The model's accuracy score is approximately 94.74%
+The model's precision score is about 90.91%
+The model's recall score is approximately 95.24%
+The model's F1 score is about 93.02%
+
+Feature Selction:
+Yes this article does perform a feature selection.
+Although it is "implicit" rather done through a seperate preprocessing algorithm.
+they performed feature analysis and correlation filtering to identify the most predictive features.
+which effectively serves as manual feature selection.
+
+How they did it?
+They visualized all 30 features.
+using box plots, swarm plots, and a correlation heatmap.
+
+Figure 1: Box plots of mean feature values
+Figure 2: Box plots of standard error (SE) feature values
+Figure 3: Box plots of worst feature values
+Figure 4: Swarm plots of mean features
+Figure 5: Feature correlation heatmap
+
+Based on this analysis, they identified 7 features with the strongest predictive power.
+They then used XGBoost’s built-in feature importance to determine which of these features contributed most to the model’s predictions.
+
+The most important ones were:
+1. concave points_worst
+2. area_worst
+3. texture_worst
+4. area_se
+
+This means they let the XGBoost model itself figure out which features are most important during training.
