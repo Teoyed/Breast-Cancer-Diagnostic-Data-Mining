@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+
+\title{\textbf{Feature Construction}}
+\author{Mohammad Reza Ahmadizadeh\\Second Assignment}
+\date{\today} % you can also write a fixed date
+
+\begin{document}
+
+\maketitle
+
+\section{What Will I Do?}
+
+For this week's assignment we have \textbf{Feature Construction}.
+
+Creating new features based on the existing features for improving feature space and to see if the
+newly added feature have what impact on our result.
+
+\section{What Is My Approach?}
+
+For this I have to options:
+
+\subsection*{Option 1: Add the New Features}
+I saw that in In most feature constructions, They keep all the original features and simply add the new ones as extra columns.
+
+\begin{itemize}
+    \item The goal of feature construction is to enrich your dataset, not replace it
+    \item You’ll then evaluate whether these additional features improve model performance.
+\end{itemize}
+
+\subsection*{Option 2: Replacing the old features}
+If i do this I will:
+
+\begin{itemize}
+    \item The new features summarize or combine correlated ones (to reduce dimensionality).
+    \item I plan to focus on interpretability rather than raw accuracy.
+\end{itemize}
+
+With this case being said I will choose to add the new freature to already existing ones because
+the newly constructed features were added to the original dataset to enrich the feature space.
+
+\section{Feature Construction}
+Based on the article that I read, It was said the size related feature such as; \emph{area}, \emph{radius} and \emph{parimeter}
+have strong influence on breast cancer classification.\\
+And with this being said several new features were constructed.
+
+\begin{enumerate}
+
+    \item \textbf{Area-to-Perimeter Mean Ratio (area\_to\_perimeter\_mean)}
+
+    Formula: $$area\_to\_perimeter\_mean = \frac{area\_mean}{parimeter\_mean}$$
+
+    Meaning:
+
+    This ratio describes the compactness of a cell nucleus.
+    A higher value suggests a larger area relative to its perimeter,
+    which may indicate a more irregular or enlarged cell — often associated with malignant tumors.
+
+    \item \textbf{Radius Range (radius\_range)}
+
+    Formula: $$radius\_range = radius\_worst - radius\_mean$$
+
+    Meaning:
+    
+    This feature measures the variation between the average and the worst radius measurement for each sample.
+    Larger differences may represent higher irregularity in cell size, which can be a sign of malignancy.
+
+    \item \textbf{Area Range (area\_range)}
+
+    Formula: $$area\_range = area\_worst - area\_mean$$
+
+    Meaning:
+    
+    Captures how much the cell area changes between mean and worst observations.
+    This reflects heterogeneity — a typical characteristic of malignant cells.
+
+    \item \textbf{Concavity-to-Compactness Ratio (concavity\_to\_compactness\_mean)}
+
+    Formula: $$concavity\_to\_compactness\_mean = \frac{concavity\_mean}{compactness\_mean}$$
+
+    Meaning:
+    
+    Shows how much concavity (degree of inward curvature of the cell boundary) exists relative to compactness.
+    A higher ratio indicates more concave, less compact cell structures, possibly indicating malignancy.
+
+    \item \textbf{Severity Index (severity\_index)}
+
+    Formula: $$severity\_index = area\_worst + concave points\_worst$$
+
+    Meaning:
+    
+    Combines two of the most influential predictors identified by Hoque et al.
+    (2024) — “area\_worst” and “concave\_points\_worst” — into a single index.
+    It represents an overall measure of cell abnormality severity.
+
+    \item \textbf{Shape Complexity Mean (shape\_complexity\_mean)}
+
+    Formula: $$shape\_complexity\_mean = mean(smoothness\_mean, compactness\_mean, concavity\_mean, concave points\_mean)$$
+
+    Meaning:
+    
+    Summarizes shape-related characteristics of each sample into one composite measure.
+    A higher value indicates more structural irregularities in the cell nucleus.
+
+\end{enumerate}
+
+\vspace*{1 cm}
+
+Each of these constructed features is designed to enhance the separability between \textbf{benign}
+and \textbf{malignant} cases by combining or comparing existing measurements in meaningful ways.
+
+\vspace*{1 cm}
+
+The features were created in an \texttt{.ipynb} file using the \texttt{pandas} liberary and \texttt{df} (DataFrame) method.
+The result is saved in a new csv file named \texttt{feature\_constructed\_dataset.csv}.
+
+\end{document}
